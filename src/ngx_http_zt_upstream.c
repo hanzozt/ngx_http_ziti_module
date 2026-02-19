@@ -14,24 +14,30 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-#ifndef NGX_HTTP_ZITI_UPSTREAM_H
-#define NGX_HTTP_ZITI_UPSTREAM_H
+#ifndef DDEBUG
+#define DDEBUG 1
+#endif
+#include "ddebug.h"
+
+#include "ngx_http_zt_module.h"
+#include "ngx_http_zt_upstream.h"
+
+#define ZITI_MAX_SERVICE_SIZE 128
 
 
-#include <ngx_core.h>
-#include <ngx_http.h>
-#include <nginx.h>
-#include "ngx_http_ziti_module.h"
+void *
+ngx_http_upstream_zt_create_srv_conf(ngx_conf_t *cf)
+{
+    ngx_http_upstream_zt_srv_conf_t    *conf;
 
+    conf = ngx_pcalloc(cf->pool, sizeof(ngx_http_upstream_zt_srv_conf_t));
+    if (conf == NULL) {
+        return NULL;
+    }
 
-typedef struct {
+    conf->pool = cf->pool;
 
-    ngx_pool_t       *pool;
+    ngx_pool_cleanup_add(cf->pool, 0);
 
-} ngx_http_upstream_ziti_srv_conf_t;
-
-
-void *ngx_http_upstream_ziti_create_srv_conf(ngx_conf_t *cf);
-
-
-#endif /* NGX_HTTP_ZITI_UPSTREAM_H */
+    return conf;
+}
