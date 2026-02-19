@@ -12,9 +12,9 @@ Learn about Ziti at [ziti.dev](https://ziti.dev)
 <img src="https://ziti-logo.s3.amazonaws.com/ngx.png" width="800" />
 
 
-[![Last Commit](https://img.shields.io/github/last-commit/openziti/ngx_http_ziti_module)]() 
-[![Issues](https://img.shields.io/github/issues-raw/openziti/ziti-http-agent)]()
-[![LOC](https://img.shields.io/tokei/lines/github/openziti/ngx_http_ziti_module)]()
+[![Last Commit](https://img.shields.io/github/last-commit/hanzozt/ngx_http_ziti_module)]() 
+[![Issues](https://img.shields.io/github/issues-raw/hanzozt/ziti-http-agent)]()
+[![LOC](https://img.shields.io/tokei/lines/github/hanzozt/ngx_http_ziti_module)]()
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=rounded)](CONTRIBUTING.md)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
@@ -48,14 +48,14 @@ This module is currently alpha quality, and should not yet be used in production
 Version
 =======
 
-This document describes ngx_http_ziti_module [v0.1.1](https://github.com/openziti/ngx_http_ziti_module/tags).
+This document describes ngx_http_ziti_module [v0.1.1](https://github.com/hanzozt/ngx_http_ziti_module/tags).
 
 Requirements
 =======
 
 This module requires:
 
-*   [Ziti C SDK](https://github.com/openziti/ziti-sdk-c)
+*   [Ziti C SDK](https://github.com/hanzozt/ziti-sdk-c)
 *   The `--with-threads` option for `./configure` for compilation.
 
 You'll need to update the config file to match your build environment.
@@ -286,10 +286,10 @@ You will need to download source code from multiple places, and after doing so, 
 Users of this module should have an understanding of what a Ziti Network
 is. To use this module, it is also required to have a functioning Ziti Network available.
 To learn more about what Ziti is and how to setup a Ziti Network, head over to [the official documentation
-site](https://openziti.github.io/ziti/overview.html).
+site](https://hanzozt.github.io/ziti/overview.html).
 
-This module depends on the [ziti-sdk-c](https://github.com/openziti/ziti-sdk-c) so you must first download and build that.
-The [ziti-sdk-c](https://github.com/openziti/ziti-sdk-c) build requires [Cmake (3.12+)](https://cmake.org/install/),
+This module depends on the [ziti-sdk-c](https://github.com/hanzozt/ziti-sdk-c) so you must first download and build that.
+The [ziti-sdk-c](https://github.com/hanzozt/ziti-sdk-c) build requires [Cmake (3.12+)](https://cmake.org/install/),
 so make sure `cmake` is on your path or replace the following `cmake` commands with the fully qualified path to the binary.
 
 The `ziti-sdk-c` requires additional dependencies to be retreived. This is accomplished via the `git submodule` command. Fetch
@@ -434,7 +434,7 @@ Report Bugs
 
 Please submit bug reports, wishlists, or patches by
 
-1. creating a ticket on the [issue tracking interface](http://github.com/openziti/ngx_http_ziti_module/issues) provided by GitHub,
+1. creating a ticket on the [issue tracking interface](http://github.com/hanzozt/ngx_http_ziti_module/issues) provided by GitHub,
 
 [Back to TOC](#table-of-contents)
 
